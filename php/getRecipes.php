@@ -7,7 +7,8 @@ $request = json_decode($postData);
 
 $searchParams = $request->search;
 
-$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&type=main+course&query=" . $searchParams,
+//$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&type=main+course&query=" . $searchParams,
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=" . $searchParams,
 array(
   "X-RapidAPI-Key" => "509300173dmshf1116c74bcb1dacp18512cjsnf62c5c6f7014"
 )
