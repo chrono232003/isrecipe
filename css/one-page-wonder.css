@@ -96,13 +96,13 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
+  background-color: #1988ff !important;
+  border-color: #1988ff !important;
 }
 
 .btn-primary:focus {
@@ -135,4 +135,14 @@ header.masthead .masthead-content .masthead-subheading {
 
 .input-group.md-form.form-sm.form-2 input.red-border  {
     border: 1px solid #ef9a9a;
+}
+
+/*custom css */
+a {
+  color: #007bff;
+}
+
+a:active, a:focus, a:hover {
+  color: #1988ff !important;
+  text-decoration: none;
 }

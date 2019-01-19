@@ -61,7 +61,6 @@
         <div class="container">
           <h1 class="masthead-heading mb-0">Is Recipe</h1>
           <h2 class="masthead-subheading mb-0">Delicious Custom Recipes</h2>
-
         </div>
       </div>
     </header>
@@ -69,9 +68,8 @@
     <div ng-controller="GetRecipeController">
 <div class="container" align="center">
     <form class="form-inline md-form mr-auto mb-4" name="searchForm" ng-submit="searchForm.$valid && getRecipes()" novalidate>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search Recipes" aria-label="Search" ng-model="search" name="search" required>
-      <br />
-      <button class="btn btn-primary btn-xl rounded-pill mt-5" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="text" placeholder="Search Recipes" aria-label="Search" ng-model="search" name="search" style="max-width: 500px; margin-top: 5px;" required>
+        <button class="btn btn-primary btn-xl rounded-pill mt-5" type="submit" style="margin-top:5px !important">Search</button>
     </form>
 </div>
      <div ng-repeat="recipe in recipeList">
@@ -96,6 +94,9 @@
       </section>
     </div>
 <div class="container">
+
+    <p>Welcome to isrecipe.com! We have 1000's of recipes to choose from with a few random ones featured below.<br />
+    Please take a glace of some of our delicious featured recipes as well as search for your favorite recipes in the search box above!</p>
     <h4>Featured Recipes</h4>
   </div>
     <div ng-repeat="randRecipe in randRecipeData">
