@@ -21,14 +21,26 @@
 	 function conditionRecipeUrl(data) {
 			for (var i = 0; i < data.length; i++) {
 				data[i].image = "https://spoonacular.com/recipeImages/" + data[i].image;
-				data[i].url = "recipe.html?id=" + data[i].id + "&title=" + data[i].title;
+
+				var title = data[i].title;
+				if (title) {
+					title = title.replace(/  +/g, " ");
+					title = title.replace(/\s+/g, '-').toLowerCase();
+				}
+
+				data[i].url = "recipe.html?id=" + data[i].id + "&title=" + title;
 			}
 			return data;
 		}
 
 		function conditionSingleRecipeUrl(data) {
  			for (var i = 0; i < data.length; i++) {
- 				data[i].url = "recipe.html?id=" + data[i].id + "&title=" + data[i].title;
+				var title = data[i].title;
+				if (title) {
+					title = title.replace(/  +/g, " ");
+					title = title.replace(/\s+/g, '-').toLowerCase();
+				}
+ 				data[i].url = "recipe.html?id=" + data[i].id + "&title=" + title;
  			}
  			return data;
  		}
@@ -85,12 +97,16 @@
 	 function getRecipeId() {
 			return getParameterByName('id')
 		}
+		function getTitle() {
+ 			return getParameterByName('title')
+ 		}
 
 		 var request = $http({
 			 method: "post",
 			 url: "php/getSingleRecipe.php",
 			 data: {
-				 id: getRecipeId()
+				 id: getRecipeId(),
+				 title:getTitle()
 			 },
 			 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		 })

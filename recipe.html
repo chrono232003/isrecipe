@@ -10,13 +10,13 @@
 
     <title>Is Recipes - Find 1000's of delicious custom recipes</title>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({
               google_ad_client: "ca-pub-7867777590859919",
               enable_page_level_ads: true
          });
-    </script>
+    </script> -->
 
     <script type="text/javascript">
       function getParameterByName(name, url) {
@@ -28,7 +28,7 @@
        if (!results[2]) return '';
        return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
-      document.getElementsByTagName('title')[0].innerHTML = "Is Recipes/recipe/" + getParameterByName('title');
+      document.getElementsByTagName('title')[0].innerHTML = "Is Recipes/recipe/" + getParameterByName('title', window.location.href.replace("&amp;", "&"));
     </script>
 
 
